@@ -3,7 +3,7 @@ CREATE TABLE hr_tickets(
   employee_id INT,
   category VARCHAR(50),
   agent_name VARCHAR(50),
-  creat_at DATETIME,
+  created_at DATETIME,
   resolved_at DATETIME,
   status VARCHAR(50)
 );
