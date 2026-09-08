@@ -3,9 +3,9 @@
 
 
 SELECT category,
-       COUNT(ticket_id) AS total_open_ticket,
+       COUNT(ticket_id) AS total_open_tickets,
        ROUND(AVG(CURRENT_DATE - created_at::date),1) AS avg_days_open
 FROM hr_tickets
 WHERE LOWER(status) NOT IN ('closed','resolved')
 GROUP BY category
-ORDER BY total_open_ticket DESC;
+ORDER BY total_open_tickets DESC;
