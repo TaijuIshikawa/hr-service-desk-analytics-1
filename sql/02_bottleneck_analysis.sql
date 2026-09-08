@@ -13,7 +13,7 @@ ORDER BY total_tickets DESC;
 
 
 SELECT agent_name,
-       ROUND(AVG(TIMESTAMPDIFF(HOUR,created_at,resloved_at)),1 AS average_operation_time
+       ROUND(AVG(TIMESTAMPDIFF(HOUR,created_at,resolved_at)),1 AS average_operation_time
   FROM hr_tickets
   WHERE status = 'closed'
   GROUP BY agent_name
